@@ -1,0 +1,199 @@
+body {
+    background-color: #232323;
+    margin: 0;
+    font-family: "sans-serif", "Montserrat", "Fira Sans";
+  overflow-x:hidden;
+}
+
+.square {
+    width: 30%;
+    background: purple;
+    padding-bottom: 30%;
+    float: left;
+    margin: 1.66%;
+    border-radius: 43%;
+    transition: background 0.6s;
+    /*    these two are browser prefixes to make it browser friendly to safari and firefox*/
+    -webkit-transition: background 0.6s;
+    -moz-transition: background 0.6s;
+}
+
+#container {
+    margin: 20px auto;
+    overflow: auto;
+    /*    same size on either size*/
+    max-width: 600px;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+    text-align: center;
+    line-height: 1.1;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+#message {
+    display: inline-block;
+    width: 20%;
+}
+
+#stripe {
+    background-color: white;
+    height: 30px;
+    text-align: center;
+    color: black;
+}
+
+#stripe span {
+    color: black;
+}
+
+.selected {
+    color: white;
+    background: steelBlue;
+}
+
+#colorDisplay {
+    font-size: 200%;
+    /*    200 percent of h1 fonttag*/
+    text-transform: uppercase;
+}
+
+button {
+    font-family: "sans-serif", "Montserrat", "Fira Sans";
+    font-weight: 700;
+    color: steelBlue;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all .5s;
+    /*    these two are browser prefixes to make it browser friendly to safari and firefox*/
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    outline: none;
+}
+
+button:hover {
+    /*    hoving over this char creates these effects*/
+    color: white;
+    background: steelblue;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    min-height: 76px;
+    background-color: steelblue;
+}
+
+#footer-message {}
+
+/*
+MEDIA QUERIES
+*/
+
+@media only screen and (max-width: 600PX) {
+    #colorDisplay {
+        font: size 114%;
+    }
+    #colorDisplay {
+        font-size: 1em;
+    }
+    #message {
+        position: relative;
+        top: -1px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #header-one {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+    #message {
+        display: none;
+        width: 10px;
+    }
+    .reset-btn {
+        margin-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .reset-btn {
+        margin-right: 12px;
+    }
+    #stripe{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 280px) {
+    .reset-btn {
+        margin-right: 10px;
+    }
+    #stripe{
+        font-size: 12px;
+    }
+}
+
+/* HEIGHT */
+
+@media only screen and (max-height: 490px) {
+    #container {
+        /* max-width: 280px !important; */
+    }
+}
+
+/* height and width*/
+
+@media only screen and (max-height: 710px) and (min-width: 220px) {
+    #container {
+        max-width: 420px;
+    }
+}
+    /* HEIGHT inside MaxH710 <-> MinWidth 220px */
+    @media only screen and (min-height: 657px) and (max-height: 710px) {
+        #container {
+            max-width: 480px;
+        }
+    }
+    @media only screen and (min-height: 562px) and (max-height: 657px) {
+        #container {
+            max-width: 300px;
+        }
+    }
+    @media only screen and (max-height: 520px) {
+        #footer-message {
+            padding-top: 0;
+        }
+        #footer {
+            height: 30px;
+            min-height: 0;
+            padding: 5px;
+        }
+    }
+    @media only screen and (min-height: 445px) and (max-height: 562px) {
+        #container {
+            max-width: 250px;
+        }
+        #colorDisplay {
+            font-size: 150%;
+        }
+    }
+    @media only screen and (min-height: 300px) and (max-height: 445px) {
+        #container {
+            max-width: 280px;
+        }
+        h1 {
+            font-size: 1.5em;
+            padding: 5px;
+        }
+    }
